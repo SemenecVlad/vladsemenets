@@ -1,0 +1,195 @@
+.contact-social
+  position: relative
+  margin-bottom: 30px
+  @media screen and (max-width: 640px)
+    margin-bottom: 25px
+  @media screen and (min-width: 768px) and (max-width: 1023px)
+    margin-bottom: 25px
+
+  .social-block
+    width: 80%
+    margin 0 auto;
+    margin-top: 30px
+    display flex
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (min-width: 320px) and (max-width: 415px) and (min-height: 568px) and (max-height: 736px)
+      //iPhone5,6,6s
+      display block
+      width: 85%
+
+  .phone
+    font-size 1.4rem
+    font-family 'Helvetica', sans-serif
+    padding: 3px
+    color white
+    transition .4s ease-in
+    @media screen and (min-width: 320px) and (max-width: 415px) and (min-height: 568px) and (max-height: 736px)
+      //iPhone5,6,6s
+      display: inline-block
+      font-size: 1.2rem
+      padding: 5px
+      margin-right: 5%
+      margin-bottom: 7%
+
+    &::before,
+    &::after
+      z-index: 1000;
+      pointer-events: none;
+      visibility: hidden;
+      position: absolute;
+      opacity: 0;
+      transition: .3s ease;
+      transform: translate3d(0, 0, 0);
+
+    &:hover
+      color $red
+      transition .4s ease-out
+    &:hover::before,
+    &:hover::after
+      visibility: visible;
+      opacity: 1;
+    &::before
+      z-index: 10001;
+      content: "";
+      position: absolute;
+      border: 6px solid transparent;
+      background: transparent;
+      border-top-color: #383838;
+      margin-bottom: -12px
+      transform: translateY(-8px);
+    &::after
+      content: attr(title);
+      font-size: 12px;
+      line-height: 12px;
+      padding: 8px 10px;
+      white-space: nowrap;
+      color: #fff;
+      background: #383838;
+      text-shadow: 0 -1px 0 #000;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 2px;
+      margin-left: -75px
+      bottom: 55px
+
+
+.contact-message
+  form
+    width 100%
+    margin-top 30px
+
+    input
+      height 28px
+      background-color lighten($section-color, 15%)
+      border none
+      color lighten($section-color, 70%)
+      padding 5px 0px 5px 5px
+
+    input[type="text"]
+      width 48%
+      margin-left 0
+      margin-right 6px
+      margin-bottom 16px
+      &:last-child
+        margin-right 0px
+      @media screen and (min-width: 320px) and (max-width: 415px) and (min-height: 568px) and (max-height: 736px)
+        //iPhone5,6,6s
+        width: 94%
+        margin-left: 6px
+        margin-right: 0;
+      @media screen and (width: 568px) and (height: 320px)
+        //iPhone5 landscape
+        width: 96%
+        margin-left: 8px
+        margin-right: 0;
+
+    input[type="email"]
+      margin-bottom 16px
+      display block
+      width 99.2%
+      @media screen and (min-width: 320px) and (max-width: 415px) and (min-height: 568px) and (max-height: 736px)
+        //iPhone5,6,6s
+        width: 94%
+        margin-left: 6px
+        margin-right: 0;
+      @media screen and (width: 568px) and (height: 320px)
+        //iPhone5 landscape
+        width: 96%
+        margin-left: 8px
+        margin-right: 0;
+
+    input[type="submit"]
+      margin 1em 0
+      width 100%
+      height 40px
+      background-color $submit
+      border none
+      color $white
+      transition .2s linear
+      &:hover
+        background-color darken($submit,25%)
+        transition .2s linear
+      @media screen and (max-width: 320px) and (height: 568px)
+        //iPhone5
+        width: 96.5%
+        margin-left: 5px
+        margin-right: 0;
+      @media screen and (width: 568px) and (height: 320px)
+        //iPhone5 landscape
+        width: 98.5%
+        margin-left: 8px
+        margin-right: 0;
+
+    textarea
+      width 99%
+      background-color lighten($section-color, 15%)
+      color lighten($section-color, 60%)
+      border none
+      padding 5px
+      @media screen and (max-width: 320px) and (height: 568px)
+        //iPhone5
+        width: 93%
+        margin-left: 6px
+        margin-right: 0;
+      @media screen and (width: 568px) and (height: 320px)
+        //iPhone5 landscape
+        width: 96%
+        margin-left: 8px
+        margin-right: 0;
+
+     textarea, input
+     &:focus
+        box-shadow 0 0 5px $white
+.contact-block
+  p
+    font-size 1.8rem
+    text-align center
+    @media screen and (max-width: 320px) and (height: 568px)
+      //iPhone5
+      font-size: 1.4rem
+  hr
+    width 180px
+    height 3px
+    background-color $white
+
+.rights
+  text-align center
+  padding-top 1rem
+  padding-bottom 2rem
+  @media screen and (max-width: 640px)
+    background-color $section-color-2
+    color $black
+    padding-top .8rem
+    padding-bottom 1rem
+  @media screen and (min-width: 768px) and (max-width: 1023px)
+    background-color $section-color-2
+    color $black
+    padding-top .8rem
+    padding-bottom 1rem
+
+  a
+    color $white
+    @media screen and (max-width: 640px)
+      color $red
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+      color $red

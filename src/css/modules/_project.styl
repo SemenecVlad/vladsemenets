@@ -1,0 +1,80 @@
+  .project-container
+    width 974.5px
+    margin-top 4.5rem
+    padding 0 25px
+    @media screen and (max-width: 640px)
+      width 96%
+      display flex
+      flex-direction row
+      padding 0
+      position relative
+      left 2%
+    @media screen and (min-width: 320px) and (max-width: 415px) and (min-height: 568px) and (max-height: 736px)
+      //iPhone5,6,6s
+      flex-direction: column
+      margin-top: 2.5rem
+    @media screen and (min-width: 568px) and (max-width: 737px) and (min-height: 320px) and (max-height: 415px)
+      //iPhone5,6,6s landscape
+      display: block;
+      width: 96%
+      padding: 0
+      margin-top: 3rem
+    @media screen and (min-width: 768px) and (max-width: 1023px)
+      width: 100%
+      display: flex
+      flex-direction: row
+      padding: 0
+    @media screen and (width: 960px)
+      margin-top: 3rem
+
+    .project
+      display inline-block
+      width 470px
+      margin-right 30px
+
+      &:last-child
+        margin-right 0px
+
+      &:hover .project-name
+        color $black
+        background-color: $white
+        transition .4s linear
+
+      @media screen and (max-width: 640px)
+        width: auto
+        margin-left: 30px
+      @media screen and (min-width: 320px) and (max-width: 415px) and (min-height: 568px) and (max-height: 736px)
+        //iPhone5,6,6s
+        width: 100%
+        margin 0
+        margin-bottom: 10px
+      @media screen and (min-width: 568px) and (max-width: 737px) and (min-height: 320px) and (max-height: 415px)
+        //iPhone5,6,6s landscape
+        display: inline-block;
+        width: 48%
+        margin-left: 1%;
+        margin-right: 3px;
+        &:last-child
+          margin-right: 0;
+      @media screen and (min-width: 768px) and (max-width: 1023px)
+        width: auto
+        margin-right: 30px
+
+      img
+        width 470px
+        @media screen and (max-width: 640px)
+          width: 100%
+        @media screen and (min-width: 768px) and (max-width: 1023px)
+          width: 100%
+        @media screen and (min-width: 568px) and (max-width: 737px) and (min-height: 320px) and (max-height: 415px)
+          //iPhone5,6,6s landscape
+          width: 100%
+
+      .project-name
+        display block
+        text-decoration none
+        text-align center
+        color $white
+        font-size 1.5rem
+        padding .95rem
+        transition .4s linear

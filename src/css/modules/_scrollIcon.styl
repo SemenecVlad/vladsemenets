@@ -1,0 +1,60 @@
+.scroll-icon {
+  position: relative;
+  top: 40vh;
+  animation-name: scrollDown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.scroll-icon img {
+  width: 100px;
+}
+
+
+@media screen and (max-width: 640px) {
+  .scroll-icon {
+    top: 50vh;
+  }
+  .scroll-icon img {
+    width: 150px
+  }
+}
+
+@media screen and (width: 320px) and (height: 568px){
+  //iPhone5
+  .scroll-icon {
+    top: 38vh;
+  }
+  .scroll-icon img {
+    width: 150px
+  }
+}
+
+@media screen and (width: 568px) and (height: 320px){
+  //iPhone5 landscape
+  .scroll-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .scroll-icon {
+    top: 45vh;
+  }
+  .scroll-icon img {
+    width: 180px;
+  }
+}
+
+@media screen and (width: 960px) and (height: 600px) {
+  //Nexus 7 landscape
+  .scroll-icon {
+    top: 22vh;
+  }
+}
+
+@media screen and (min-width: 1340px) and (max-width: 1366px) {
+  .scroll-icon {
+    top: 38vh;
+  }
+}
