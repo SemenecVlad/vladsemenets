@@ -49,14 +49,14 @@
     <div id="myworks" class="my-works">
       <div class="container">
         <div class="title">MY WORKS</div>
-        <div class="project-container">
-          <div class="project">
-            <img src="./img/proj1.jpg" alt="Project 1" />
-            <a href="" class="project-name">PROJECT 1</a>
+        <div id="works" class="project-container">
+          <div class="project" >
+            <img src="./img/proj1.jpg" alt="Luxury Shop" data-action="luxury"/>
+            <p class="project-name" data-action="luxury">Luxury Shop</p>
           </div>
-          <div class="project">
-            <img src="./img/proj2.png" alt="Project 2" />
-            <a href="" class="project-name">PROJECT 2</a>
+          <div class="project" >
+            <img src="./img/proj2.png" alt="Project 2" data-action="proj2"/>
+            <p class="project-name" data-action="proj2">PROJECT 2</p>
           </div>
         </div>
 
@@ -101,12 +101,26 @@
           </div>
           <div class="contact-block contact-message">
             <p>SEND ME A MESSAGE:</p> <hr />
-            <form action="GET">
-              <input type="text" placeholder="Your First name..." required="required" />
-              <input type="text" placeholder="Your Second name..." required="required" />
-              <input type="email" placeholder="Your e-mail..." required="required" />
+            <form id="form" >
+              <!-- Hidden Required Fields -->
+		          <input type="hidden" name="project_name" value="Vlad Semenets">
+		          <input type="hidden" name="admin_email" value="semenecvlad@mail.ru">
+		          <input type="hidden" name="form_subject" value="Form Subject">
+		          <!-- END Hidden Required Fields -->
+
+		          <input type="text" name="First name" placeholder="You First name..." required>
+              <input type="text" name="Second name" placeholder="You Second name..." required>
+		          <input type="email" name="E-mail" placeholder="You E-mail..." required>
+              <textarea name="message" cols="90" rows="10" placeholder="Your message..." required="required"></textarea>
+		          <input type="submit" value="submit"/>
+
+
+
+              <!-- <input type="text" name="f_name" placeholder="Your First name..." required="required" />
+              <input type="text" name="s_name" placeholder="Your Second name..." required="required" />
+              <input type="email" name="email" placeholder="Your e-mail..." required="required" />
               <textarea name="message" id="message" cols="90" rows="10" placeholder="Your message..." required="required"></textarea>
-              <input type="submit" value="submit" disabled/>
+              <input type="submit" value="submit"/> -->
             </form>
           </div>
         </div>
