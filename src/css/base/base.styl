@@ -1,3 +1,92 @@
+@import "base/_fontAwesome.styl";
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raleway-Regular'),
+        url('../fonts/Raleway/Raleway-Regular.woff2') format('woff2'),
+        url('../fonts/Raleway/Raleway-Regular.woff') format('woff'),
+        url('../fonts/Raleway/Raleway-Regular.ttf') format('ttf'),
+        url('../fonts/Raleway/Raleway-Regular.eot') format('eot');
+        unicode-range: U+0030-007A; /* Latin glyphs */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Raleway-Bold'),
+        url('../fonts/Raleway/Raleway-Bold.woff2') format('woff2'),
+        url('../fonts/Raleway/Raleway-Bold.woff') format('woff'),
+        url('../fonts/Raleway/Raleway-Bold.ttf') format('ttf'),
+        url('../fonts/Raleway/Raleway-Bold.eot') format('eot');
+        unicode-range: U+0030-007A; /* Latin glyphs */
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: local('FontAwesome'),
+        url('../fonts/FontAwesome/fontawesome-webfont.woff2')
+        url('../fonts/FontAwesome/fontawesome-webfont.woff')
+        url('../fonts/FontAwesome/fontawesome-webfont.ttf')
+        url('../fonts/FontAwesome/fontawesome-webfont.eot');
+  font-weight: normal;
+  font-style: normal;
+}
+
 p
   margin-top 0
   margin-bottom 0
+
+a
+  color: $red
+
+#modal
+  width: 80%;
+  height: 85vh;
+  position: fixed;
+  top: 5%;
+  left: 8.5%;
+  color: $black
+  padding: 20px;
+  background-color: $white;
+  z-index: 5;
+  box-shadow: 0 0 7px 2px rgba(30, 30, 30, 0.6);
+  display: none;
+  overflow-y: scroll;
+  opacity: 0;
+  @media all and (max-width: 640px)
+    left: 5%
+
+  .md-image
+    width: 100%
+    outline: 1px solid lightness($black, 80%)
+    margin-top: 1rem
+
+  .title
+    outline 4px solid $black
+    font-size: 2rem
+    top 2vh
+    @media all and (max-width: 640px)
+      width: 70%
+
+  #close
+    //position: absolute;
+    background-color: $red;
+    width: 15px;
+    padding: 5px;
+    text-align: center;
+    float: right;
+    color: $white;
+    cursor: pointer;  
+
+#background
+  background-color: $black;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  cursor: pointer;
+  display: none;
