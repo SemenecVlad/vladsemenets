@@ -28,7 +28,7 @@ var notify_Stylus = 'Styles compilation is complete!',
 var styles_Watch = './src/css/',
     styles_From = './src/css/main.styl',
     styles_To = './build/css/';
-    
+
 var files_Watch = './src/files/';
 
 var html_Dir = './src/**/*.html',
@@ -59,12 +59,12 @@ var config = {
 gulp.task('html', function () {
   return gulp.src('./src/**/*.html')
       .pipe(rigger())
-      .pipe(htmlmin({
-        collapseWhitespace: true,
-        removeComments: true,
-        minifyJs: true,
-        minifyCSS: true
-      }))
+      // .pipe(htmlmin({
+      //   collapseWhitespace: true,
+      //   removeComments: true,
+      //   minifyJs: true,
+      //   minifyCSS: true
+      // }))
       .pipe(gulp.dest('./build/'))
       .pipe(notify({ message: notify_Html }))
       .pipe(reload({ stream: true }))
