@@ -1,0 +1,42 @@
+.my-work-process-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 150px;
+  //outline: 1px solid $outline-color;
+
+  .work-process-part {
+    width: 24.9%;
+    min-height: 150px;
+    cursor: pointer;
+    position: relative;
+    //outline: 1px solid $outline-color-nested;
+    transition: .4s ease-out;
+    &:before {
+      content: "➤";
+      position: absolute;
+      top: 40%;
+      font-size: 150%;
+      color: $black;
+    }
+    &:first-child:before {
+      content: '';
+    }
+    &:hover {
+      background-color: darken($lightwhite, 5%);
+      //border: 1px solid darken($lightwhite, 15%);
+      transition: .4s ease-in;
+    }
+    .icon-work-process {
+      width: 60px;
+      margin-left: 98px;
+      margin-top: 20px;
+    }
+    h4 {
+      text-align: center;
+      color: $black;
+    }
+  }
+}
