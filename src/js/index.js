@@ -1,3 +1,36 @@
+//Youtube-style loader on top =================================================
+$().ready(function(){
+        var images_count = $('img').length; // quantity of images on a page
+        var percent = images_count / 100; // percent part of one image
+        var loading_progress = 0; // current progress
+        var images_ready = 0; // images loaded
+        if (images_count > 0){ // if images existed
+                $('body').append('<div id="top_progess_bar"> </div>'); // adding mark-up for progress bar
+                $('#top_progess_bar') // setting up styles for progress bar
+                                .css('position', 'fixed')
+                                .css('top', 0)
+                                .css('left', 0)
+                                .css('width', '0%')
+                                .css('height', '4px')
+                                .css('background-color', 'red')
+                                .css('z-index', 100000);
+        }//if
+
+        $('img').load(function(){ // when image is loaded
+                images_ready++; // increase counter of loaded images
+                loading_progress += percent; // increase percents
+                if(loading_progress >= 100){ // if all images are loaded
+                        $('#top_progess_bar').remove(); // remove progress bar
+                }//
+                $('#top_progess_bar').css('width', loading_progress + '%'); // setting up size of progress bar in percents
+        });
+
+        $(window).load(function(){ // when page is loaded
+                $('#top_progess_bar').remove(); // remove progress bar
+        });
+});
+//End Youtube-style loader=================================================
+
 //Smooth Scroll to section
 var SmoothScroll = $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
