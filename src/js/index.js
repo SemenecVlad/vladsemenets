@@ -128,3 +128,11 @@ function Works(elem) {
   };
 }
   new Works(works);
+
+//=============================
+
+$('#hire-btn').on('click', function(){
+  alert('The fastest way to contact me is send me a message on : semenecvlad@mail.ru .
+Website is currently under development and some features are not working at the moment.
+Sorry for the temporary inconvenience');
+});
