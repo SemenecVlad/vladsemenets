@@ -84,11 +84,15 @@ var formAjax = $(document).ready(function(){
     url: "send.php", //Change
     data: th.serialize()
   }).done(function() {
-    alert("Thank you!");
+    $('.thank').append('<div id="thanks">
+      <img src="./img/thanks.png" /><p>Thank You!</p>
+    </div>');
+    //alert("Thank you!");
     setTimeout(function() {
+    $('#thanks').hide();
       // Done Functions
       th.trigger("reset");
-    }, 1000);
+    }, 1500);
   });
   return false;
 });
