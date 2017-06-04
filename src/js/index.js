@@ -112,10 +112,22 @@ function Works(elem) {
     });
   };
   this.proj2 = function() {
-    alert("This project will be added later...");
+    //alert("This project will be added later...");
+    $("#background").fadeIn(400, function () {
+      $("#modal-teo")
+      .css('display', 'block')
+      .animate({opacity: 1, top: '5%'}, 200);
+    });
   };
   this.close = function() {
       $('#modal')
+        .animate({opacity: 0, top: '45%'}, 200,
+        function () {
+        $(this).css('display', 'none');
+        $('#background').fadeOut(400); });
+  };
+  this.close_teo = function() {
+      $('#modal-teo')
         .animate({opacity: 0, top: '45%'}, 200,
         function () {
         $(this).css('display', 'none');

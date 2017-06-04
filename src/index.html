@@ -37,12 +37,13 @@
           <img src="./img/scroll-ico.png" alt="scroll down" />
         </div>
       </div>
+      <div class="title-background"></div>
     </div>
 
     <div class="about-me">
       <div id="about" class="container">
         <div class="title">ABOUT ME</div>
-        <img class="profile-image" src="./img/profile.jpg" alt="It's me" />
+        <img class="profile-image" src="./img/profile_photo.jpg" alt="It's me" />
         <div class="about-text">
           <p>My name is Vlad Semenets, and I'm a ukrainian (front-end) web developer living in Zaporizhya, Ukraine.</p>
           <p>I like to work on the client-side, designing interfaces with CSS and programming awesome experiences with JavaScript. I also do some back-end when it's needed.</p>
@@ -86,8 +87,8 @@
             <p class="project-name" data-action="luxury">Luxury Shop</p>
           </div>
           <div class="project" >
-            <img src="./img/proj2.png" alt="Project 2" data-action="proj2"/>
-            <p class="project-name" data-action="proj2">PROJECT 2</p>
+            <img src="./img/proj2_teo.jpg" alt="Project 2" data-action="proj2"/>
+            <p class="project-name" data-action="proj2">TEO Building</p>
           </div>
           <div class="project" >
             <img src="./img/proj2.png" alt="Project 3" data-action="proj2"/>
@@ -95,7 +96,7 @@
           </div>
 
           <!-- Modal Window -->
-          <div id="modal">
+          <div data-name="Luxury" id="modal">
             <div id="close" data-action="close">X</div>
             <div class="title">Luxury Shop</div>
             <div class="project-description">
@@ -115,7 +116,27 @@
             </div>
             <img src="./img/luxury.jpg" alt="Luxury Shop 1" class="md-image">
           </div> <!-- End of modal window -->
-          <div id="background" data-action="close"></div>
+          <div data-name="Teo" id="modal-teo">
+            <div id="close-teo" data-action="close_teo">X</div>
+            <div class="title">TEO Building</div>
+            <div class="project-description">
+
+                <b>This is UI design of building-website.</b>
+                <!-- In project used next technologies:
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>jQuery</li>
+                  <li>SASS</li>
+                  <li>AngularJS</li>
+                  <li>Gulp(with plugins)</li>
+                </ul> -->
+                <!-- <b>You can see souce code on my </b><a href="https://github.com/SemenecVlad/preview_1" target="_blank">Github repository</a> -->
+
+            </div>
+            <img src="./img/teobuild_modal.jpg" alt="Luxury Shop 1" class="md-image">
+          </div>
+          <div id="background" data-action="close close_teo"></div>
         </div>
       </div>
     </div>
